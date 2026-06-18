@@ -230,17 +230,27 @@ body::before {
     transition: all 0.4s;
 }
 
-.nav.scrolled {
+/* .nav.scrolled {
     background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border);
+} */
+
+[data-theme="light"] .nav.scrolled {
+   background: rgba(10, 10, 10, 0.8);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: 1rem 2rem;
     border-bottom: 1px solid var(--border);
 }
 
-[data-theme="light"] .nav.scrolled {
-    background: rgba(245, 241, 232, 0.8);
+.nav.scrolled {
+        background: rgba(245, 241, 232, 0.8);
+ 
 }
+
 
 .nav-logo {
     display: flex;
