@@ -1,0 +1,351 @@
+---
+const today = new Date();
+---
+
+<footer>
+	<div class="footer-inner">
+		<div class="footer-top reveal">
+			<div>
+				<a href="#home" class="nav-logo" style="margin-bottom: 1rem;">
+					<div class="nav-logo-mark">H</div>
+					<span>Himanshu Saxena</span>
+				</a>
+				<p
+					style="color: var(--text-dim); max-width: 400px; margin-top: 1rem; font-size: 0.95rem;"
+				>
+					Transforming ideas into fast, modern & user-centered digital
+					experiences. Available for freelance and full-time
+					opportunities.
+				</p>
+			</div>
+			<div class="footer-big-text">
+				Let's<br /><span class="italic">talk.</span>
+			</div>
+		</div>
+
+		<div class="footer-grid">
+			<div class="footer-col">
+				<h4>Navigate</h4>
+				<ul>
+					<li><a href="#about">About</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#portfolio">Work</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h4>Services</h4>
+				<ul>
+					<li>Frontend Development</li>
+					<li>WordPress</li>
+					<li>Shopify</li>
+					<li>Landing Pages</li>
+					<li>Optimization</li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h4>Contact</h4>
+				<ul>
+					<li>
+						<a href="mailto:himanshusaxena1747@gmail.com"
+							>himanshusaxena1747@gmail.com</a
+						>
+					</li>
+					<li><a href="tel:7310934166">+91 7310934166</a></li>
+					<li>Noida, India</li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h4>Social</h4>
+				<ul>
+					<li>
+						<a
+							href="https://www.linkedin.com/in/himanshu-saxena-533550208?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+							target="_blank">LinkedIn</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://www.facebook.com/share/1BZrXKCyWs/"
+							target="_blank">Facebook</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://www.instagram.com/himanshu_chitransh?igsh=MW51Z3cwMTdqaGN0bQ==
+"
+							target="_blank">Instagram</a
+						>
+					</li>
+					<li><a href="https://wa.me/917310934166">WhatsApp</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="footer-bottom">
+			<p>© 2026 Himanshu Saxena. All rights reserved.</p>
+			<p>
+				Designed & built with <span style="color: var(--accent);"
+					>✦</span
+				> in Noida, India
+			</p>
+		</div>
+	</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script is:inline>
+    // Make sure GSAP is loaded before registering
+    if (typeof gsap !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger);
+    }
+
+    // Hero Animation
+    function animateHero() {
+        if (document.querySelector(".hero-title .line-inner")) {
+            gsap.to(".hero-title .line-inner", {
+                y: 0,
+                duration: 1.2,
+                stagger: 0.15,
+                ease: "power4.out",
+            });
+        }
+    }
+
+    // Custom Cursor
+    const dot = document.getElementById("cursorDot");
+    const ring = document.getElementById("cursorRing");
+    let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+
+    if (dot && ring) {
+        document.addEventListener("mousemove", (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            dot.style.left = mouseX + "px";
+            dot.style.top = mouseY + "px";
+        });
+
+        function animateRing() {
+            ringX += (mouseX - ringX) * 0.15;
+            ringY += (mouseY - ringY) * 0.15;
+            ring.style.left = ringX + "px";
+            ring.style.top = ringY + "px";
+            requestAnimationFrame(animateRing);
+        }
+        animateRing();
+
+        const hoverables = document.querySelectorAll(
+            "a, button, .project-card, .service-row, .skill-row, .exp-item, .bento-item, .testimonial-card, .contact-method, .social-link"
+        );
+        hoverables.forEach((el) => {
+            el.addEventListener("mouseenter", () => ring.classList.add("hover"));
+            el.addEventListener("mouseleave", () => ring.classList.remove("hover"));
+        });
+    }
+
+    // Theme Toggle
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+    const html = document.documentElement;
+
+    if (themeToggle && themeIcon) {
+        const savedTheme = localStorage.getItem("theme") || "dark";
+        html.setAttribute("data-theme", savedTheme);
+        updateThemeIcon(savedTheme);
+
+        themeToggle.addEventListener("click", () => {
+            const current = html.getAttribute("data-theme");
+            const next = current === "dark" ? "light" : "dark";
+            html.setAttribute("data-theme", next);
+            localStorage.setItem("theme", next);
+            updateThemeIcon(next);
+        });
+
+        function updateThemeIcon(theme) {
+            if (theme === "light") {
+                themeIcon.innerHTML = '<circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>';
+            } else {
+                themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>';
+            }
+        }
+    }
+
+    // Mobile Menu
+    const menuBtn = document.getElementById("menuBtn");
+    const closeMenu = document.getElementById("closeMenu");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => mobileMenu.classList.add("open"));
+    }
+    if (closeMenu && mobileMenu) {
+        closeMenu.addEventListener("click", () => mobileMenu.classList.remove("open"));
+    }
+    if (mobileMenu) {
+        document.querySelectorAll(".mobile-link").forEach((l) =>
+            l.addEventListener("click", () => mobileMenu.classList.remove("open"))
+        );
+    }
+
+    // Scroll Progress
+    const scrollProgress = document.getElementById("scrollProgress");
+    const nav = document.getElementById("nav");
+    
+    window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        
+        if (scrollProgress) {
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            scrollProgress.style.width = scrollPercent + "%";
+        }
+
+        if (nav) {
+            if (scrollTop > 50) nav.classList.add("scrolled");
+            else nav.classList.remove("scrolled");
+        }
+    });
+
+    // Reveal animations
+    if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+        gsap.utils.toArray(".reveal").forEach((el) => {
+            gsap.to(el, {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 88%",
+                    toggleActions: "play none none none",
+                },
+            });
+        });
+    }
+
+    // Portfolio Load More Logic
+    const projects = document.querySelectorAll(".project-card");
+    const loadMoreBtn = document.getElementById("loadMoreBtn");
+    let currentItem = 4;
+
+    if (projects.length > 0) {
+        projects.forEach((project, index) => {
+            if (index < currentItem) {
+                project.style.display = "grid"; 
+            }
+        });
+
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener("click", () => {
+                let max = currentItem + 4;
+                for (let i = currentItem; i < max && i < projects.length; i++) {
+                    projects[i].style.display = "grid";
+                    if (typeof gsap !== "undefined") {
+                        gsap.fromTo(
+                            projects[i],
+                            { opacity: 0, y: 40 },
+                            { opacity: 1, y: 0, duration: 1, ease: "power3.out" }
+                        );
+                    }
+                }
+                currentItem += 4;
+
+                if (typeof ScrollTrigger !== "undefined") ScrollTrigger.refresh();
+
+                if (currentItem >= projects.length) {
+                    loadMoreBtn.style.display = "none";
+                }
+            });
+        }
+    }
+
+    // Contact Form
+    const contactForm = document.getElementById("contactForm");
+    if (contactForm) {
+        contactForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector(".form-submit");
+            if (btn) {
+                const original = btn.innerHTML;
+                btn.innerHTML = "<span>✓ Message Sent!</span>";
+                btn.style.background = "var(--accent)";
+                setTimeout(() => {
+                    btn.innerHTML = original;
+                    e.target.reset();
+                }, 2500);
+            }
+        });
+    }
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        });
+    });
+
+    // Magnetic buttons
+    document.querySelectorAll(".btn-magnetic").forEach((btn) => {
+        btn.addEventListener("mousemove", (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+        });
+        btn.addEventListener("mouseleave", () => {
+            btn.style.transform = "";
+        });
+    });
+
+    // Parallax for hero glow
+    const glow = document.querySelector(".hero-glow");
+    if (glow) {
+        document.addEventListener("mousemove", (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 50;
+            const y = (e.clientY / window.innerHeight - 0.5) * 50;
+            glow.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
+        });
+    }
+
+    // Loader and Scroll Lock Removal
+    window.addEventListener("load", () => {
+        const loader = document.getElementById("loader");
+        const counter = document.getElementById("counter");
+        const loaderBar = document.getElementById("loaderBar");
+
+        // If no loader exists on this page, just unlock scroll and animate hero immediately
+        if (!loader) {
+            document.body.classList.remove("no-scroll");
+            if (typeof animateHero === "function") animateHero();
+            return;
+        }
+
+        let count = 0;
+        const counterInterval = setInterval(() => {
+            count += Math.floor(Math.random() * 8) + 2;
+
+            if (count >= 100) {
+                count = 100;
+                clearInterval(counterInterval);
+                if (counter) counter.textContent = "100";
+                if (loaderBar) loaderBar.style.width = "100%";
+
+                setTimeout(() => {
+                    loader.classList.add("hidden");
+                    document.body.classList.remove("no-scroll");
+                    if (typeof animateHero === "function") {
+                        animateHero();
+                    }
+                }, 500);
+            } else {
+                if (counter) counter.textContent = count;
+                if (loaderBar) loaderBar.style.width = count + "%";
+            }
+        }, 60);
+    });
+</script>

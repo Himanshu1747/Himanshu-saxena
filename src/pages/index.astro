@@ -1,0 +1,1345 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Form from "../components/Form.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body class="no-scroll">
+		<Header />
+		<section class="hero" id="home">
+			<div class="hero-bg-grid"></div>
+			<div class="hero-glow"></div>
+
+			<div class="hero-inner">
+				<div class="hero-top reveal">
+					<span class="line"></span>
+					<span class="status"
+						><span class="status-dot"></span>Available for freelance
+						— June 2026</span
+					>
+				</div>
+
+				<h1 class="hero-title">
+					<span class="line"
+						><span class="line-inner">Frontend</span></span
+					>
+					<span class="line"
+						><span class="line-inner"
+							><span class="italic">developer</span> &</span
+						></span
+					>
+					<span class="line"
+						><span class="line-inner"
+							>digital <span class="outline">craftsman</span
+							></span
+						></span
+					>
+				</h1>
+
+				<div class="hero-bottom">
+					<p class="hero-desc reveal">
+						I'm <strong style="color: var(--text);"
+							>Himanshu Saxena</strong
+						> — building fast, modern, and conversion-focused websites
+						for startups, agencies, and brands worldwide. 4+ years turning
+						ideas into pixel-perfect experiences.
+					</p>
+					<div class="hero-cta reveal">
+						<a href="#portfolio" class="btn-magnetic btn-primary-m">
+							<span>View Selected Work</span>
+							<span class="arrow">→</span>
+						</a>
+						<a href="#contact" class="btn-magnetic btn-ghost-m">
+							<span>Start a Project</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="hero-scroll">
+				<span>Scroll</span>
+				<div class="hero-scroll-line"></div>
+			</div>
+		</section>
+
+		<section class="marquee-section" style="padding: 2rem 0;">
+			<div class="marquee">
+				<div class="marquee-item">
+					React <span class="star">✦</span>
+					<span class="italic">Shopify</span>
+					<span class="star">✦</span> WordPress <span class="star"
+						>✦</span
+					>
+					<span class="italic">Astro</span>
+					<span class="star">✦</span> Next.js <span class="star"
+						>✦</span
+					>
+					<span class="italic">Tailwind</span>
+					<span class="star">✦</span> GSAP
+				</div>
+				<div class="marquee-item">
+					React <span class="star">✦</span>
+					<span class="italic">Shopify</span>
+					<span class="star">✦</span> WordPress <span class="star"
+						>✦</span
+					>
+					<span class="italic">Astro</span>
+					<span class="star">✦</span> Next.js <span class="star"
+						>✦</span
+					>
+					<span class="italic">Tailwind</span>
+					<span class="star">✦</span> GSAP
+				</div>
+			</div>
+		</section>
+
+		<section id="about">
+			<div class="container">
+				<div class="section-header reveal">
+					<div>
+						<span class="section-label">About Me</span>
+						<h2 class="section-title">
+							Crafting <span class="italic">digital</span> experiences
+							that users actually love.
+						</h2>
+					</div>
+					<p class="section-desc">
+						A quick look at who I am, what I do, and the numbers
+						behind the work.
+					</p>
+				</div>
+
+				<div class="bento-grid">
+					<div class="bento-item bento-large bento-about reveal">
+						<div>
+							<span class="section-label">Introduction</span>
+							<h3>
+								Hey, I'm Himanshu — a frontend developer who
+								believes <span class="italic"
+									>great websites</span
+								> should feel as good as they look.
+							</h3>
+							<p>
+								Based in Noida, India, I've spent the last 4+
+								years turning Figma dreams into responsive
+								reality. From luxury caviar brands to
+								high-energy cycling studios, I build websites
+								that don't just work — they convert, engage, and
+								leave an impression.
+							</p>
+						</div>
+						<div>
+							<div class="bento-tags">
+								<span class="bento-tag">Pixel Perfect</span>
+								<span class="bento-tag">Mobile First</span>
+								<span class="bento-tag">SEO Optimized</span>
+								<span class="bento-tag"
+									>Performance Focused</span
+								>
+								<span class="bento-tag">Accessible</span>
+							</div>
+							<div class="signature">— Himanshu Saxena</div>
+						</div>
+					</div>
+
+					<div class="bento-item bento-medium bento-image reveal">
+						<img
+							src="https://prized-thrill-151420f211.media.strapiapp.com/small_himanshu_e8d408c5a0.png"
+							alt="Himanshu"
+						/>
+					</div>
+
+					<div class="bento-item bento-small bento-stat reveal">
+						<div>
+							<div class="bento-stat-value">
+								4<span class="accent">+</span>
+							</div>
+							<div class="bento-stat-label">
+								Years of crafting websites
+							</div>
+						</div>
+					</div>
+
+					<div class="bento-item bento-small bento-stat reveal">
+						<div>
+							<div class="bento-stat-value">
+								100<span class="accent">+</span>
+							</div>
+							<div class="bento-stat-label">
+								Websites delivered worldwide
+							</div>
+						</div>
+					</div>
+
+					<div class="bento-item bento-wide bento-highlight reveal">
+						<div class="big-icon">✦</div>
+						<div>
+							<h4>
+								Currently available for freelance projects &
+								full-time opportunities.
+							</h4>
+						</div>
+					</div>
+
+					<div class="bento-item bento-wide bento-stat reveal">
+						<div>
+							<div class="bento-stat-value">
+								20<span class="accent">+</span>
+							</div>
+							<div class="bento-stat-label">
+								Happy clients across industries
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="skills">
+			<div class="container">
+				<div class="section-header reveal">
+					<div>
+						<span class="section-label">Toolkit</span>
+						<h2 class="section-title">
+							Technologies I <span class="italic">master</span> & tools
+							I trust.
+						</h2>
+					</div>
+					<p class="section-desc">
+						A curated stack of modern frontend technologies,
+						frameworks, and tools that power every project I build.
+					</p>
+				</div>
+
+				<div class="skills-container">
+					<div>
+						<div class="skill-category reveal">
+							<div class="skill-category-title">
+								— Frontend Core
+							</div>
+							<div class="skill-list">
+								<div class="skill-row">
+									<div class="skill-name">
+										<span class="num">01</span>HTML5 & CSS3
+									</div>
+									<div class="skill-level">
+										<div class="skill-dots">
+											<span class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"></span>
+										</div>
+										Expert
+									</div>
+								</div>
+								<div class="skill-row">
+									<div class="skill-name">
+										<span class="num">02</span>JavaScript
+										(ES6+)
+									</div>
+									<div class="skill-level">
+										<div class="skill-dots">
+											<span class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span class="skill-dot"
+											></span>
+										</div>
+										Advanced
+									</div>
+								</div>
+								<div class="skill-row">
+									<div class="skill-name">
+										<span class="num">03</span>TypeScript
+									</div>
+									<div class="skill-level">
+										<div class="skill-dots">
+											<span class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span class="skill-dot"
+											></span>
+										</div>
+										Advanced
+									</div>
+								</div>
+								<div class="skill-row">
+									<div class="skill-name">
+										<span class="num">04</span>React.js
+									</div>
+									<div class="skill-level">
+										<div class="skill-dots">
+											<span class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span class="skill-dot"
+											></span>
+										</div>
+										Advanced
+									</div>
+								</div>
+								<div class="skill-row">
+									<div class="skill-name">
+										<span class="num">05</span>Next.js &
+										Astro
+									</div>
+									<div class="skill-level">
+										<div class="skill-dots">
+											<span class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span class="skill-dot"
+											></span>
+										</div>
+										Advanced
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="skill-category reveal">
+							<div class="skill-category-title">
+								— UI & Styling
+							</div>
+							<div class="skill-list">
+								<div class="skill-row">
+									<div class="skill-name">
+										<span class="num">06</span>Tailwind CSS
+									</div>
+									<div class="skill-level">
+										<div class="skill-dots">
+											<span class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"></span>
+										</div>
+										Expert
+									</div>
+								</div>
+								<div class="skill-row">
+									<div class="skill-name">
+										<span class="num">07</span> Bootstrap
+									</div>
+									<div class="skill-level">
+										<div class="skill-dots">
+											<span class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span class="skill-dot"
+											></span>
+										</div>
+										Advanced
+									</div>
+								</div>
+								<div class="skill-row">
+									<div class="skill-name">
+										<span class="num">08</span>GSAP
+									</div>
+									<div class="skill-level">
+										<div class="skill-dots">
+											<span class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span class="skill-dot"
+											></span>
+										</div>
+										Advanced
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="skill-category reveal">
+							<div class="skill-category-title">
+								— CMS & eCommerce
+							</div>
+							<div class="skill-list">
+								<div class="skill-row">
+									<div class="skill-name">
+										<span class="num">09</span>WordPress
+									</div>
+									<div class="skill-level">
+										<div class="skill-dots">
+											<span class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"></span>
+										</div>
+										Expert
+									</div>
+								</div>
+								<div class="skill-row">
+									<div class="skill-name">
+										<span class="num">10</span>Shopify &
+										Liquid
+									</div>
+									<div class="skill-level">
+										<div class="skill-dots">
+											<span class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span class="skill-dot"
+											></span>
+										</div>
+										Advanced
+									</div>
+								</div>
+								<div class="skill-row">
+									<div class="skill-name">
+										<span class="num">11</span>Strapi CMS
+									</div>
+									<div class="skill-level">
+										<div class="skill-dots">
+											<span class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span class="skill-dot"
+											></span><span class="skill-dot"
+											></span>
+										</div>Proficient
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="skill-category reveal">
+							<div class="skill-category-title">
+								— Tools & Workflow
+							</div>
+							<div class="skill-list">
+								<div class="skill-row">
+									<div class="skill-name">
+										<span class="num">12</span>Git & GitHub
+									</div>
+									<div class="skill-level">
+										<div class="skill-dots">
+											<span class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span class="skill-dot"
+											></span>
+										</div>
+										Advanced
+									</div>
+								</div>
+								<div class="skill-row">
+									<div class="skill-name">
+										<span class="num">13</span>Figma & VS
+										Code
+									</div>
+									<div class="skill-level">
+										<div class="skill-dots">
+											<span class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"></span>
+										</div>
+										Expert
+									</div>
+								</div>
+								<div class="skill-row">
+									<div class="skill-name">
+										<span class="num">14</span>Vercel &
+										Netlify
+									</div>
+									<div class="skill-level">
+										<div class="skill-dots">
+											<span class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span
+												class="skill-dot filled"
+											></span><span class="skill-dot"
+											></span>
+										</div>
+										Advanced
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="skills-visual reveal">
+						<div class="skills-orbit">
+							<div class="orbit-center">Frontend<br />Stack</div>
+							<div class="orbit-ring orbit-ring-1">
+								<div
+									class="orbit-item"
+									style="top: -25px; left: 50%; transform: translateX(-50%);"
+								>
+									React
+								</div>
+								<div
+									class="orbit-item"
+									style="bottom: -25px; left: 50%; transform: translateX(-50%);"
+								>
+									Next
+								</div>
+								<div
+									class="orbit-item"
+									style="top: 50%; left: -25px; transform: translateY(-50%);"
+								>
+									JS
+								</div>
+								<div
+									class="orbit-item"
+									style="top: 50%; right: -25px; transform: translateY(-50%);"
+								>
+									TS
+								</div>
+							</div>
+							<div class="orbit-ring orbit-ring-2">
+								<div
+									class="orbit-item"
+									style="top: -25px; left: 50%; transform: translateX(-50%);"
+								>
+									Astro
+								</div>
+								<div
+									class="orbit-item"
+									style="bottom: -25px; left: 50%; transform: translateX(-50%);"
+								>
+									Shopify
+								</div>
+								<div
+									class="orbit-item"
+									style="top: 50%; left: -25px; transform: translateY(-50%);"
+								>
+									WP
+								</div>
+								<div
+									class="orbit-item"
+									style="top: 50%; right: -25px; transform: translateY(-50%);"
+								>
+									GSAP
+								</div>
+								<div
+									class="orbit-item"
+									style="top: 15%; left: 15%;"
+								>
+									CSS
+								</div>
+								<div
+									class="orbit-item"
+									style="bottom: 15%; right: 15%;"
+								>
+									Git
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="services">
+			<div class="container">
+				<div class="section-header reveal">
+					<div>
+						<span class="section-label">Services</span>
+						<h2 class="section-title">
+							What I can <span class="italic">build</span> for you.
+						</h2>
+					</div>
+					<p class="section-desc">
+						End-to-end frontend solutions, from concept to
+						deployment. Every project built with care.
+					</p>
+				</div>
+
+				<div class="services-list">
+					<div class="service-row reveal">
+						<div class="service-num">01</div>
+						<div class="service-title">
+							Website <span class="italic">Development</span>
+						</div>
+						<div class="service-desc">
+							Custom websites built from scratch with modern tech.
+							Fast, scalable, SEO-ready.
+						</div>
+						<div class="service-arrow">→</div>
+					</div>
+					<div class="service-row reveal">
+						<div class="service-num">02</div>
+						<div class="service-title">
+							Frontend <span class="italic">Implementation</span>
+						</div>
+						<div class="service-desc">
+							Turning Figma, XD, or PSD designs into pixel-perfect
+							responsive websites.
+						</div>
+						<div class="service-arrow">→</div>
+					</div>
+					<div class="service-row reveal">
+						<div class="service-num">03</div>
+						<div class="service-title">
+							Landing <span class="italic">Pages</span>
+						</div>
+						<div class="service-desc">
+							High-converting pages optimized for lead generation
+							and marketing campaigns.
+						</div>
+						<div class="service-arrow">→</div>
+					</div>
+					<div class="service-row reveal">
+						<div class="service-num">04</div>
+						<div class="service-title">
+							Shopify <span class="italic">Stores</span>
+						</div>
+						<div class="service-desc">
+							Custom Shopify themes, storefront optimization, and
+							eCommerce experiences.
+						</div>
+						<div class="service-arrow">→</div>
+					</div>
+					<div class="service-row reveal">
+						<div class="service-num">05</div>
+						<div class="service-title">
+							Speed <span class="italic">Optimization</span>
+						</div>
+						<div class="service-desc">
+							Core Web Vitals, page speed scores, and overall
+							performance improvements.
+						</div>
+						<div class="service-arrow">→</div>
+					</div>
+					<div class="service-row reveal">
+						<div class="service-num">06</div>
+						<div class="service-title">
+							Website <span class="italic">Maintenance</span>
+						</div>
+						<div class="service-desc">
+							Ongoing updates, bug fixes, feature additions, and
+							technical support.
+						</div>
+						<div class="service-arrow">→</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="portfolio">
+			<div class="container">
+				<div class="section-header reveal">
+					<div>
+						<span class="section-label">Selected Work</span>
+						<h2 class="section-title">
+							Recent <span class="italic">projects</span> I'm proud
+							of.
+						</h2>
+					</div>
+					<p class="section-desc">
+						A curated collection of websites and web apps built for
+						businesses, agencies, and brands worldwide.
+					</p>
+				</div>
+
+				<div class="projects-list" id="projectsGrid">
+					
+
+					<div class="project-card reveal" data-category="react">
+						<div class="project-visual">
+							<img
+								src="/soup4changes.webp"
+								alt="soup4change"
+								width="768"
+								height="575"
+								loading="lazy"
+							/>
+							<a
+								href="https://www.soup4change.com/"
+								target="_blank"
+								class="project-view-badge">View Live</a
+							>
+						</div>
+						<div class="project-content">
+							<div class="project-num">01</div>
+							<div class="project-meta">
+								<span class="project-category"
+									>Political Campaign Website</span
+								>
+								<span class="project-year">2026</span>
+							</div>
+							<h3 class="project-title">soup4change</h3>
+							<p class="project-desc">
+								A grassroots congressional campaign website for
+								Shelby Campbell, a working-class mother and
+								third-generation union member running for
+								Michigan’s 13th District. The platform
+								highlights her mission, policy priorities,
+								community-driven values, campaign journey,
+								merchandise store, donation initiatives, and
+								voter engagement tools to connect with and
+								empower working families.
+							</p>
+							<div class="project-tags">
+								<span class="project-tag">Astro JS</span>
+								<span class="project-tag">Responsive</span>
+								<span class="project-tag">High speed</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-card reveal" data-category="react">
+						<div class="project-visual">
+							<img
+								src="/green.webp"
+								alt="GREEN MOUNTAIN FENCE"
+								width="768"
+								height="575"
+								loading="lazy"
+							/>
+							<a
+								href="https://www.greenmountainfencecompany.com/"
+								target="_blank"
+								class="project-view-badge">View Live</a
+							>
+						</div>
+						<div class="project-content">
+							<div class="project-num">02</div>
+							<div class="project-meta">
+								<span class="project-category"
+									>Fence Installation Website 2025</span
+								>
+								<span class="project-year">2025</span>
+							</div>
+							<h3 class="project-title">GREEN MOUNTAIN FENCE</h3>
+							<p class="project-desc">
+								A professional fencing company website
+								showcasing over 13 years of expertise in
+								residential fence installation across
+								Connecticut. The platform highlights a wide
+								range of fencing solutions, including wood,
+								vinyl, aluminum, chain-link, pool enclosures,
+								and post-and-rail fences, while emphasizing
+								quality craftsmanship, competitive pricing,
+								lifetime workmanship warranties, customer
+								reviews, and easy quote requests.
+							</p>
+							<div class="project-tags">
+								<span class="project-tag">Astro JS</span>
+								<span class="project-tag">Responsive</span>
+								<span class="project-tag">High speed</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-card reveal" data-category="shopify">
+						<div class="project-visual">
+							<img
+								src="/washington.webp"
+								alt="Washington Bullion"
+								width="768"
+								height="575"
+								loading="lazy"
+							/>
+							<a
+								href="https://washingtonbullion.com/"
+								target="_blank"
+								class="project-view-badge">View Live</a
+							>
+						</div>
+						<div class="project-content">
+							<div class="project-num">03</div>
+							<div class="project-meta">
+								<span class="project-category">Wordpress</span>
+								<span class="project-tag">JavaScript</span>
+								<span class="project-tag">Responsive</span>
+							</div>
+							<h3 class="project-title">Washington Bullion</h3>
+							<p class="project-desc">
+								Full e-commerce platform for gold, silver, and
+								collectible bullion with a trust-building,
+								professional interface.
+							</p>
+							<div class="project-tags">
+								<span class="project-tag">Shopify</span>
+								<span class="project-tag">Liquid</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-card reveal" data-category="landing">
+						<div class="project-visual">
+							<img
+								src="/fast-act.webp"
+								alt="FAST-ACT"
+								width="768"
+								height="575"
+								loading="lazy"
+							/>
+							<a
+								href="https://fast-act.com/"
+								target="_blank"
+								class="project-view-badge">View Live</a
+							>
+						</div>
+						<div class="project-content">
+							<div class="project-num">04</div>
+							<div class="project-meta">
+								<span class="project-category"
+									>Corporate Web</span
+								>
+								<span class="project-year">2025</span>
+							</div>
+							<h3 class="project-title">FAST-ACT</h3>
+							<p class="project-desc">
+								Professional website showcasing advanced dry
+								decontamination technology for emergency
+								response and healthcare.
+							</p>
+							<div class="project-tags">
+								<span class="project-tag">HTML/CSS</span>
+								<span class="project-tag">JavaScript</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-card reveal" data-category="wordpress">
+						<div class="project-visual">
+							<img
+								src="/sandra.webp"
+								alt="Sandra Hughes"
+								width="768"
+								height="575"
+								loading="lazy"
+							/>
+							<a
+								href="https://sandra-hughes.com/"
+								target="_blank"
+								class="project-view-badge">View Live</a
+							>
+						</div>
+						<div class="project-content">
+							<div class="project-num">05</div>
+							<div class="project-meta">
+								<span class="project-category"
+									>Executive Coaching</span
+								>
+								<span class="project-year">2025</span>
+							</div>
+							<h3 class="project-title">Sandra Hughes</h3>
+							<p class="project-desc">
+								Modern executive-coaching website reflecting
+								trust and motivation through clean typography
+								and smooth UI interactions.
+							</p>
+							<div class="project-tags">
+								<span class="project-tag">WordPress</span>
+								<span class="project-tag">Elementor</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-card reveal" data-category="landing">
+						<div class="project-visual">
+							<img
+								src="/the-cycle.webp"
+								alt="The Cycle Circle"
+								width="768"
+								height="575"
+								loading="lazy"
+							/>
+							<a
+								href="https://thecyclecircle.com/"
+								target="_blank"
+								class="project-view-badge">View Live</a
+							>
+						</div>
+						<div class="project-content">
+							<div class="project-num">06</div>
+							<div class="project-meta">
+								<span class="project-category"
+									>Fitness Studio</span
+								>
+								<span class="project-year">2025</span>
+							</div>
+							<h3 class="project-title">The Cycle Circle</h3>
+							<p class="project-desc">
+								High-energy indoor cycling studio website with
+								rhythm-based rides, class schedules, and a
+								vibrant fitness-driven design.
+							</p>
+							<div class="project-tags">
+								<span class="project-tag">React</span>
+								<span class="project-tag">Tailwind</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-card reveal" data-category="astro">
+						<div class="project-visual">
+							<img
+								src="/j-pierce.webp"
+								alt="J. Pierce"
+								width="768"
+								height="575"
+								loading="lazy"
+							/>
+							<a
+								href="https://jpierce.com/"
+								target="_blank"
+								class="project-view-badge">View Live</a
+							>
+						</div>
+						<div class="project-content">
+							<div class="project-num">07</div>
+							<div class="project-meta">
+								<span class="project-category"
+									>Artist Portfolio</span
+								>
+								<span class="project-year">2025</span>
+							</div>
+							<h3 class="project-title">J. Pierce</h3>
+							<p class="project-desc">
+								Artistic portfolio showcasing colorful fine art,
+								product designs, and urban murals with a
+								gallery-like experience.
+							</p>
+							<div class="project-tags">
+								<span class="project-tag">HTML CSS JS </span>
+								<span class="project-tag">GSAP</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-card reveal" data-category="wordpress">
+						<div class="project-visual">
+							<img
+								src="/legrand.webp"
+								alt="Le Grand Caviar"
+								width="768"
+								height="575"
+								loading="lazy"
+							/>
+							<a
+								href="https://www.legrandcaviar.com/"
+								target="_blank"
+								class="project-view-badge">View Live</a
+							>
+						</div>
+						<div class="project-content">
+							<div class="project-num">08</div>
+							<div class="project-meta">
+								<span class="project-category"
+									>Luxury Brand</span
+								>
+								<span class="project-year">2025</span>
+							</div>
+							<h3 class="project-title">Le Grand Caviar</h3>
+							<p class="project-desc">
+								Elegant luxury caviar platform reflecting
+								heritage and fine craftsmanship with a premium,
+								intuitive browsing experience.
+							</p>
+							<div class="project-tags">
+								<span class="project-tag">WordPress</span>
+								<span class="project-tag">WooCommerce</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="load-more-container reveal">
+					<button id="loadMoreBtn" class="btn-magnetic btn-ghost-m">
+						<span>Load More</span>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<section id="experience">
+			<div class="container">
+				<div class="section-header reveal">
+					<div>
+						<span class="section-label">Journey</span>
+						<h2 class="section-title">
+							The <span class="italic">path</span> that shaped my craft.
+						</h2>
+					</div>
+					<p class="section-desc">
+						A timeline of career milestones, roles, and the
+						experiences that built my expertise.
+					</p>
+				</div>
+
+				<div class="experience-grid">
+					<div class="reveal">
+						<div class="exp-column-title">— Work Experience</div>
+						<div class="exp-item">
+							<div class="exp-date">JUN 2022 — PRESENT</div>
+							<h3 class="exp-title">Frontend Developer</h3>
+							<div class="exp-company">
+								Ogrelogic Solutions Pvt. Ltd.
+							</div>
+							<p class="exp-desc">
+								Developing responsive websites for international
+								clients using React, Astro, and Shopify.
+								Optimizing Core Web Vitals and building reusable
+								UI systems.
+							</p>
+						</div>
+						<div class="exp-item">
+							<div class="exp-date">MAR 2021 — JUN 2021</div>
+							<h3 class="exp-title">Intern</h3>
+							<div class="exp-company">Anchor Research Labs</div>
+							<p class="exp-desc">
+								Completed B.Tech final-year internship. Worked
+								on technical projects and practical
+								implementation.
+							</p>
+						</div>
+					</div>
+
+					<div class="reveal">
+						<div class="exp-column-title">
+							— Education & Training
+						</div>
+						<div class="exp-item">
+							<div class="exp-date">OCT 2022 — APR 2023</div>
+							<h3 class="exp-title">Frontend Training</h3>
+							<div class="exp-company">CETPA Infotech</div>
+							<p class="exp-desc">
+								Advanced training in frontend development. Built
+								multiple real-world projects using HTML, CSS,
+								JavaScript, and React.
+							</p>
+						</div>
+						<div class="exp-item">
+							<div class="exp-date">2017 — 2021</div>
+							<h3 class="exp-title">B.Tech</h3>
+							<div class="exp-company">Engineering</div>
+							<p class="exp-desc">
+								Bachelor's degree with focus on computer science
+								fundamentals and practical software development.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				<div class="section-header reveal">
+					<div>
+						<span class="section-label">Kind Words</span>
+						<h2 class="section-title">
+							What clients <span class="italic">say</span> about working
+							with me.
+						</h2>
+					</div>
+					<p class="section-desc">
+						Real feedback from real people I've had the pleasure of
+						working with.
+					</p>
+				</div>
+
+				<div class="testimonials-grid">
+					<div class="testimonial-card reveal">
+						<p class="testimonial-quote">
+							Himanshu delivered an exceptional website that
+							exceeded our expectations. His attention to detail
+							and performance optimization made a real difference
+							to our business.
+						</p>
+						<div class="testimonial-author">
+							<div class="testimonial-avatar">RK</div>
+							<div>
+								<div class="testimonial-name">Rahul Kumar</div>
+								<div class="testimonial-role">
+									CEO, TechStart India
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="testimonial-card reveal">
+						<p class="testimonial-quote">
+							Working with Himanshu was a fantastic experience. He
+							transformed our Figma designs into a beautiful,
+							fast-loading website. Highly recommended for any
+							frontend work!
+						</p>
+						<div class="testimonial-author">
+							<div class="testimonial-avatar">SP</div>
+							<div>
+								<div class="testimonial-name">Sarah Parker</div>
+								<div class="testimonial-role">
+									Founder, DesignCo
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="testimonial-card reveal">
+						<p class="testimonial-quote">
+							Himanshu built our Shopify store from scratch and
+							the results were incredible. Our conversion rate
+							increased by 40% after the redesign. Professional
+							and reliable!
+						</p>
+						<div class="testimonial-author">
+							<div class="testimonial-avatar">AM</div>
+							<div>
+								<div class="testimonial-name">Alex Morgan</div>
+								<div class="testimonial-role">
+									Owner, FashionHub
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="cta-section">
+			<div class="cta-bg"></div>
+			<div class="container" style="position: relative; z-index: 1;">
+				<h2 class="cta-title reveal">
+					Let's build something <span class="italic">amazing</span> together.
+				</h2>
+				<p class="cta-desc reveal">
+					Got a project in mind? I'm currently accepting new clients
+					for Q3 2026. Let's turn your vision into reality.
+				</p>
+				<a
+					href="#contact"
+					class="btn-magnetic btn-primary-m reveal"
+					style="font-size: 1rem; padding: 1.25rem 2.5rem;"
+				>
+					<span>Start Your Project</span>
+					<span class="arrow">→</span>
+				</a>
+			</div>
+		</section>
+
+		<section id="contact">
+			<div class="container">
+				<div class="contact-grid">
+					<div class="contact-info reveal">
+						<span class="section-label">Get in Touch</span>
+						<h2>
+							Let's create <span class="italic">something</span> remarkable.
+						</h2>
+						<p>
+							Whether you need a new website, a redesign, or a
+							frontend expert for your team — I'd love to hear
+							about your project.
+						</p>
+
+						<div class="contact-methods">
+							<a
+								href="mailto:himanshusaxena1747@gmail.com"
+								class="contact-method"
+							>
+								<div class="contact-method-icon">
+									<svg
+										width="20"
+										height="20"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+									>
+										<path
+											d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+										></path>
+										<polyline points="22,6 12,13 2,6"
+										></polyline>
+									</svg>
+								</div>
+								<div>
+									<div class="contact-method-label">
+										Email me
+									</div>
+									<div class="contact-method-value">
+										himanshusaxena1747@gmail.com
+									</div>
+								</div>
+							</a>
+
+							<a href="tel:7310934166" class="contact-method">
+								<div class="contact-method-icon">
+									<svg
+										width="20"
+										height="20"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+									>
+										<path
+											d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"
+										></path>
+									</svg>
+								</div>
+								<div>
+									<div class="contact-method-label">
+										Call me
+									</div>
+									<div class="contact-method-value">
+										+91 7310934166
+									</div>
+								</div>
+							</a>
+
+							<a
+								href="https://wa.me/917310934166"
+								class="contact-method"
+							>
+								<div class="contact-method-icon">
+									<svg
+										width="20"
+										height="20"
+										viewBox="0 0 24 24"
+										fill="currentColor"
+									>
+										<path
+											d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+										></path>
+									</svg>
+								</div>
+								<div>
+									<div class="contact-method-label">
+										WhatsApp
+									</div>
+									<div class="contact-method-value">
+										Message me anytime
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<div class="social-links">
+							<a
+								href="#"
+								class="social-link"
+								aria-label="LinkedIn"
+							>
+								<svg
+									width="18"
+									height="18"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+								>
+									<path
+										d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+									></path>
+								</svg>
+							</a>
+							<a href="#" class="social-link" aria-label="GitHub">
+								<svg
+									width="18"
+									height="18"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+								>
+									<path
+										d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+									></path>
+								</svg>
+							</a>
+							<a
+								href="#"
+								class="social-link"
+								aria-label="Twitter"
+							>
+								<svg
+									width="18"
+									height="18"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+								>
+									<path
+										d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+									></path>
+								</svg>
+							</a>
+						</div>
+
+						<div
+							style="margin-top: 2rem; padding: 1.5rem; background: var(--bg-2); border: 1px solid var(--border); border-radius: 16px;"
+						>
+							<div
+								style="font-size: 0.8rem; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem;"
+							>
+								Based in
+							</div>
+							<div
+								style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 500;"
+							>
+								Noida, Uttar Pradesh, India 🇮🇳
+							</div>
+						</div>
+					</div>
+                    <Form/>
+				</div>
+			</div>
+		</section>
+		<Footer />
+	</body>
+</html>
